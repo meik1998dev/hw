@@ -1,0 +1,53 @@
+{%extends 'blog/home.html'%}
+{% block content%}
+
+
+<h2 style="color: azure; font-size: 16px;">Please fill every state's box with unique number between 0 and 8</h2>
+<h2 class="state">initial state &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  final state </h2>
+<form action="/blog/solve/" method="post" id="systemform">
+  {% csrf_token %}
+  <div class="card-section">
+    <div class="card-list">
+      <div class="card">
+        <div id="puzzle">
+          <input id="b0" required type="text" class="btn btn-default" placeholder="0" maxlength="1" name="b0" /> <input
+            id="b1" required type="text" class="btn btn-default" placeholder="1" maxlength="1" name="b1" /> <input
+            id="b2" type="text" class="btn btn-default" placeholder="2" maxlength="1" name="b2" /><br />
+          <input id="b3" required type="text" class="btn btn-default" placeholder="3" maxlength="1" name="b3" /> <input
+            id="b4" required type="text" class="btn btn-default" placeholder="4" maxlength="1" name="b4" /> <input
+            id="b5" type="text" class="btn btn-default" placeholder="5" maxlength="1" name="b5" /><br />
+          <input id="b6" required type="text" class="btn btn-default" placeholder="6" maxlength="1" name="b6" /> <input
+            id="b7" required type="text" class="btn btn-default" placeholder="7" maxlength="1" name="b7" /> <input
+            id="b8" type="text" class="btn btn-default" placeholder="8" maxlength="1" name="b8" /><br />
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div id="puzzle">
+          <input id="b0" required type="text" class="btn btn-default" placeholder="0" maxlength="1" name="b00" /> <input
+            id="b1" required type="text" class="btn btn-default" placeholder="1" maxlength="1" name="b11" /> <input
+            id="b2" type="text" class="btn btn-default" placeholder="2" maxlength="1" name="b22" /><br />
+          <input id="b3" required type="text" class="btn btn-default" placeholder="3" maxlength="1" name="b33" /> <input
+            id="b4" required type="text" class="btn btn-default" placeholder="4" maxlength="1" name="b44" /> <input
+            id="b5" type="text" class="btn btn-default" placeholder="5" maxlength="1" name="b55" /><br />
+          <input id="b6" required type="text" class="btn btn-default" placeholder="6" maxlength="1" name="b66" /> <input
+            id="b7" required type="text" class="btn btn-default" placeholder="7" maxlength="1" name="b77" /> <input
+            id="b8" type="text" class="btn btn-default" placeholder="8" maxlength="1" name="b88" /><br />
+        </div>
+      </div>
+
+      <!--   <div class="card">
+            <img src="https://images.unsplash.com/photo-1468082547792-d37c6c74003e?w=320"/>
+          </div>-->
+    </div>
+  </div>
+  <div class="card" id="butn">
+    <button type="submit" form="systemform" class="btn btn-default"
+      style="width:220px; height:50px;font-size: 30px;background-color:rgb(23, 71, 83); color:burlywood; border:none">Solving
+      <i class="fa fa-chevron-right" aria-hidden="true"></i> </button>
+  </div>
+</form>
+
+{% endblock content%}
