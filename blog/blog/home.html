@@ -1,44 +1,46 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css'%}"/>
+    <!-- <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css'%}"/> -->
     <link rel="stylesheet" href="{% static 'blog/css/main.css'%}" />
-    <link rel="shortcut icon" href="{% static 'blog/images/puzzle-logo.png'%}" />
+    <!-- <link rel="shortcut icon" href="{% static 'blog/images/puzzle-logo.png'%}" /> -->
     {% if title %}
     <title>Game 8-puzzle | {{title}}</title>
     {% endif%}
 
 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script type="text/javascript" src="puzzle.js"></script>
 
 
 </head>
+
 <body>
 
     <center>
 
-        <img src="{% static 'blog/images/puzzle-logo-bg.png'%}" width="150"/>
+        <img src="{% static 'blog/images/puzzle-logo-bg.png'%}" width="150" />
         <span class="title">8 Puzzle</span>
         <br />
 
-<section>
- 
-    {% block content%}
+        <section>
+
+            {% block content%}
 
 
-    {% endblock content%}
- 
-</section>
+            {% endblock content%}
+
+        </section>
     </center>
 
- 
 
 
 
@@ -60,13 +62,15 @@
 
 
 
-
-
-    <script src="{% static 'blog/js/jquery.min.js' %}"></script>
-    <script src="{% static 'blog/js/popper.js' %}"></script>
-    <script src="{% static 'blog/js/fw-all.min.js' %}"></script>
-    <script src="{% static 'blog/js/cards.js' %}">
-    
-</script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+        integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="{% static 'blog/js/cards.js' %}"></script> -->
 </body>
+
 </html>
